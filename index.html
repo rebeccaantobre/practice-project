@@ -69,6 +69,29 @@
     .card p::after {
       content: "\201D";
     }
+
+    .card button {
+      margin-top: 1.25rem;
+      padding: 0.6rem 1.5rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      background: #8e44ad;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .card button:hover {
+      background: #7a3898;
+      transform: translateY(-1px);
+    }
+
+    .card button:active {
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -78,7 +101,26 @@
   </div>
 
   <div class="card">
-    <p>Suffer now to enjoy later</p>
+    <p id="quote">Suffer now to enjoy later</p>
+    <button type="button" onclick="nextQuote()">New Affirmation</button>
   </div>
+
+  <script>
+    const quotes = [
+      "Suffer now to enjoy later",
+      "Grace is built in the quiet hours",
+      "Every setback is a setup for a comeback",
+      "Discipline today, freedom tomorrow",
+      "Your patience is planting seeds you haven't seen yet",
+      "Bloom on your own time"
+    ];
+
+    let quoteIndex = 0;
+
+    function nextQuote() {
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      document.getElementById("quote").textContent = quotes[quoteIndex];
+    }
+  </script>
 </body>
 </html>
