@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello from Queencess</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -12,17 +16,24 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #f8e1f4, #e6e6fa);
+      gap: 2.5rem;
+      padding: 3rem 1.5rem;
+      background: linear-gradient(135deg, #f8e1f4, #e6e6fa 60%, #dcd6f7);
       font-family: Georgia, 'Times New Roman', serif;
       color: #3a2e4f;
     }
 
+    .hero {
+      text-align: center;
+    }
+
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: normal;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.25rem;
+      color: #5b4b78;
     }
 
     .name {
@@ -31,10 +42,43 @@
       color: #8e44ad;
       margin: 0;
     }
+
+    .card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(94, 60, 130, 0.15);
+      padding: 2rem 2.5rem;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #5b4b78;
+      line-height: 1.5;
+    }
+
+    .card p::before {
+      content: "\201C";
+    }
+
+    .card p::after {
+      content: "\201D";
+    }
   </style>
 </head>
 <body>
-  <h1>Hello</h1>
-  <p class="name">Queencess</p>
+  <div class="hero">
+    <h1>Hello</h1>
+    <p class="name">Queencess</p>
+  </div>
+
+  <div class="card">
+    <p>Suffer now to enjoy later</p>
+  </div>
 </body>
 </html>
