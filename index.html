@@ -117,7 +117,7 @@
 
     let quoteIndex = 0;
 
-    fuction nextQuote() {
+    function nextQuote() {
       quoteIndex = (quoteIndex + 1) % quotes.length;
       document.getElementById("quote").textContent = quotes[quoteIndex];
     }
